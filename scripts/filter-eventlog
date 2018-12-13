@@ -1,0 +1,11 @@
+#! /usr/bin/env python3
+
+import sys
+
+from opensmtpd_eventlog.processor import EventLog
+
+if __name__ == "__main__":
+    directory = "/tmp"
+    if len(sys.argv) > 1:
+        directory = sys.argv[1]
+    EventLog(directory = directory).run()
